@@ -1,0 +1,20 @@
+version: '3.6'
+
+services:
+  medscan:
+    container_name: ms_medscan
+    image: ghcr.io/vshelke/medscan/api:latest
+    restart: always
+    ports:
+      - "45680:45680"
+    depends_on:
+      - caddy
+    env_file:
+      - ./config/.env
+      - ./config/.secrets.env
+    networks:
+      - medscan_nw
+
+networks:
+  medscan_nw:
+    driver: bridge

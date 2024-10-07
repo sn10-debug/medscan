@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://download.pytorch.org/whl/cpu"
+verify_ssl = true
+name = "pytorchcpu"
+
+[packages]
+django = "==4.2.5"
+ultralytics = "*"
+python-dotenv = "*"
+whitenoise = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
+psycopg = "*"
+boto3 = "*"
+psycopg-binary = "*"
+gunicorn = "*"
+torch = {version="*", index="pytorchcpu"}
+torchvision = {version="*", index="pytorchcpu"}
+django-jsonform = "*"
+celery = "*"
+redis = "*"
+dotenv = "*"
+
+[dev-packages]
+isort = "*"
+flake8 = "*"
+black = "*"
+
+[requires]
+python_version = "3.11"

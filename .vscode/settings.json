@@ -1,0 +1,16 @@
+{
+    "python.analysis.extraPaths": [
+        "medscan"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "pylint.args": [
+        "--load-plugins=pylint_django",
+        "--django-settings-module=medscan.settings"
+    ],
+    "pylint.cwd": "${workspaceFolder}/medscan",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "none",
+        "reportOptionalSubscript": "none",
+    }
+}

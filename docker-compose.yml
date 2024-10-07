@@ -1,0 +1,25 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: ms_postgres
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - db_medscan_v1:/var/lib/postgresql/data
+    env_file:
+      - ./config/.env
+
+  redis:
+    image: redis:latest
+    container_name: ms_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_medscan_v1:/data
+    restart: always
+
+volumes:
+  db_medscan_v1:
+  redis_medscan_v1:
